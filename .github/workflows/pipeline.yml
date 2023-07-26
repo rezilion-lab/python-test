@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - uses: Rezilion/github-action@v2.13.4
+      - uses: Rezilion/github-action@latest
         with:
           image_name: 'dtwitch/python-test'
           mode: 'start'
