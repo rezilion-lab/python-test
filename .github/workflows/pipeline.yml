@@ -22,13 +22,13 @@ jobs:
     needs: [python-test]
     runs-on: ubuntu-latest
     container:
-      image: rezilion/validate-ci:6978c669
+      image: rezilion/validate-ci:b22238db
 
     env:
       REZILION_LICENSE_KEY: ${{ secrets.REZILION_LICENSE_KEY }}
       REZILION_ACCESS_TOKEN: ${{ secrets.REZILION_ACCESS_TOKEN }}
       REZILION_API_KEY: ${{ secrets.REZILION_API_KEY }}
-      REZILION_RUN_REMEDIATE: true
+      REZILION_REMEDIATE_CONFIG: low:exploitable,medium:all,high:all,critical:all
       REZILION_BRANCH_NAME_UPLOADING_REGEX: ^main$
 
     steps:
